@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Nilai</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        .reset-button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(247, 128, 191);">
+    <div class="container">
+        <h2 class="text-center">Aplikasi Nilai</h2>
+        <div class="form-section">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nim">NIM</label>
+                        <input type="text" class="form-control" id="nim">
+                    </div>
+                    <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <input type="text" class="form-control" id="nama">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-info text-white">
+                            Nilai Teori
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="presensi-teori">Presensi</label>
+                                <input type="text" class="form-control" id="presensi-teori">
+                            </div>
+                            <div class="form-group">
+                                <label for="tugas-teori">Tugas</label>
+                                <input type="text" class="form-control" id="tugas-teori">
+                            </div>
+                            <div class="form-group">
+                                <label for="uts-teori">UTS</label>
+                                <input type="text" class="form-control" id="uts-teori">
+                            </div>
+                            <div class="form-group">
+                                <label for="uas-teori">UAS</label>
+                                <input type="text" class="form-control" id="uas-teori">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-secondary text-white">
+                            Nilai Praktek
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="presensi-praktek">Presensi</label>
+                                <input type="text" class="form-control" id="presensi-praktek">
+                            </div>
+                            <div class="form-group">
+                                <label for="tugas-praktek">Tugas</label>
+                                <input type="text" class="form-control" id="tugas-praktek">
+                            </div>
+                            <div class="form-group">
+                                <label for="uts-praktek">UTS</label>
+                                <input type="text" class="form-control" id="uts-praktek">
+                            </div>
+                            <div class="form-group">
+                                <label for="uas-praktek">UAS</label>
+                                <input type="text" class="form-control" id="uas-praktek">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section text-center">
+            <div style="float: left;" > <button style="width: 150px; border-radius: 15px;" id="save-button" class="btn btn-primary">Simpan</button> &nbsp; &nbsp;
+                <button style="width: 150px; border-radius: 15px" id="clear-button" class="btn btn-danger">Batal</button></div><br><br>
+                
+           
+        </div>
+
+        
+
+        <div class="table-container">
+            <h4>Rincian Nilai</h4><br>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">NIM</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Presensi</th>
+                        <th scope="col">Tugas</th>
+                        <th scope="col">UTS</th>
+                        <th scope="col">UAS</th>
+                        <th scope="col">Nilai Akhir</th>
+                        <th scope="col">Grade</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Data akan ditambahkan di sini -->
+                </tbody>
+            </table>
+        </div>
+
+        <button id="reset-button" class="btn btn-warning reset-button">Reset</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
